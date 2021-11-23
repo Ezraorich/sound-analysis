@@ -1,3 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import cm
+import librosa
+import csv
+import os
+from glob import glob
+from pathlib import Path
+import soundfile as sf
+
 directory_in_str = 'D:/Sound'
 new_dir  = 'D:/CHUNKS_WITH_OVERLAP50/'
 pathlist = Path(directory_in_str).glob('**/*.wav')
