@@ -21,7 +21,7 @@ for i in pathlist:
         split.append(temp)
 
     for i in range(noSections):
-        filename = new_dir+str(a)+'_covid_{0}.wav'.format(i)
+        filename = new_dir+str(a)+'_{0}.wav'.format(i)
     
         sf.write(filename, split[i], sr, format = 'wav')
         print(librosa.get_duration(y=split[i], sr=sr))
