@@ -10,10 +10,18 @@ def split(filepath):
         min_silence_len = 500,
         silence_thresh = dBFS-16)
     return chunks
-    
+  
 # the second method splits the given audio for 1000 ms which is 1second   
 from pydub import AudioSegment
 from pydub.utils import make_chunks
+
+#file_path = 'C:/Users/Asus/Documents/Foldername/newwav/1588311962576.wav'
+def get_sound_id_from_file_path(file_path):
+    a = file_path.split('/')[-1][:-4]
+    
+    return a
+#get_sound_id_from_file_path('C:/Users/Asus/Documents/Foldername/testwav/1586793423518.wav')
+
 for i in get_data_files(): 
     myaudio = AudioSegment.from_file(i , "wav") 
     chunk_length_ms = 1000 # pydub calculates in millisec
