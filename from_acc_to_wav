@@ -1,0 +1,12 @@
+import librosa
+import ffmpeg
+import soundfile as sf
+from pydub import AudioSegment
+
+from pathlib import Path
+import os
+
+path_in_str = "D:/MpEWoS_1629281772000.aac"
+y, sr = librosa.load(path_in_str)
+    
+sf.write("D:/MpEWoS_1629281772000.wav", y, sr, format ='wav')
