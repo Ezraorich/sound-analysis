@@ -17,5 +17,5 @@ def one_sec_file_length_filter(path):
                 count+=1
     print(count)
     
-    one_sec_file_length_filter(path_test)
-    one_sec_file_length_filter(path_train)
+one_sec_file_length_filter(path_test)
+one_sec_file_length_filter(path_train)
